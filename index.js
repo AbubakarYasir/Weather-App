@@ -24,15 +24,22 @@ app.get("/", function (req, res) {
             const temp = weatherData.current.temp_c;
             const condition = weatherData.current.condition.text;
             res.send(
-                "The temperature in " +
+                "<h1>Live Weather</h1>" +
+                    "The temperature in " +
                     "<strong>" +
-                    chosenCity +
+                    cityName +
+                    ", " +
+                    countryName +
                     "</strong>" +
                     " is " +
                     "<strong>" +
                     temp +
                     "</strong>" +
-                    " degree Celcius."
+                    " degree Celcius." +
+                    "<br> The condition is " +
+                    "<strong>" +
+                    condition +
+                    "</strong>"
             );
         });
     });
