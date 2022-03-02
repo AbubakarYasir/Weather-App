@@ -23,7 +23,17 @@ app.get("/", function (req, res) {
             const countryName = weatherData.location.country;
             const temp = weatherData.current.temp_c;
             const condition = weatherData.current.condition.text;
-            res.send("The temperature in " + chosenCity + " is " + temp + " degree Celcius.");
+            res.send(
+                "The temperature in " +
+                    "<strong>" +
+                    chosenCity +
+                    "</strong>" +
+                    " is " +
+                    "<strong>" +
+                    temp +
+                    "</strong>" +
+                    " degree Celcius."
+            );
         });
     });
     console.log("Server is Up and Running");
